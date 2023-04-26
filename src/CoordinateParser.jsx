@@ -6,6 +6,8 @@ import whatsapp from "./whatsapp.svg";
 import twitter from "./twitter.svg";
 import linkedin from "./linkedin.svg";
 import share from "./share.svg";
+import arrowDown from "./arrow-down.svg";
+import arrowUp from "./arrow-up.svg";
 import "./App.css";
 
 function CoordinateParser(props) {
@@ -285,8 +287,7 @@ function CoordinateParser(props) {
 
                     <form method="POST" name="form10" enctype="application/x-www-form-urlencoded ">
 
-                        <div>Insertar grados, minutos y segundos:</div>
-                        <div>latitud:</div>
+                        <div>Insertar la latitud en grados, minutos y segundos:</div>
                         <div>
                             <input name="dlat" type="INT" maxlength="5" id="DMSlat" onBlur={inputDlat} />
                             <label>°</label>
@@ -296,9 +297,7 @@ function CoordinateParser(props) {
                             <label>"</label>
                         </div>
 
-                        <div>Insertar grados, minutos y segundos:</div>
-                        <div>longitud:</div>
-
+                        <div>Insertar la longitud en grados, minutos y segundos:</div>
                         <div>
                             <input name="dlon" type="INT" maxlength="5" id="DMSlon" onBlur={inputDlon} />
                             <label>°</label>
@@ -364,21 +363,20 @@ function CoordinateParser(props) {
 
                 <form className="form form3" name="frmConverter">
 
-                    <h3>Conversor de coordenadas geográficas a UTM</h3>
+                    <h3>Conversor de coordenadas decimales a UTM</h3>
 
                     <div>
-                        <div>Las coordenadas geográficas deben ser
+                        <p>Las coordenadas geográficas deben ser
                             ingresadas y serán mostradas en grados decimales. Los números negativos
                             indican longitudes de Oeste y latitudes de Sur. Las coordenadas UTM
                             deben ser ingresadas y serán mostradas en metros. El modelo de elipsoide
-                            utilizado es el WGS84.</div>
+                            utilizado es el WGS84.</p>
                     </div>
 
                     <div>
 
-                        <div>Geográficas</div>
-
                         <div>
+                            <h2>Coordenadas en grados decimales</h2>
                             <div>
                                 <div>Longitud:</div>
                                 <div><input name="txtLon" type="text" id="txtLon4" /></div>
@@ -389,42 +387,34 @@ function CoordinateParser(props) {
                             </div>
                         </div>
 
-                    </div>
-
-                    <div>
-
-                        <div><input type="button" onClick={cmdLat2UTM_click} value=">>"></input></div>
-
-                        <div><input type="button" onClick={cmdUTM2Lat_click} value="<<"></input></div>
-
-                    </div>
-
-                    <div>
                         <div>
-                            UTM
+                            <button className="btn-arrow" onClick={cmdLat2UTM_click}><img src={arrowDown} /></button>
+                            <button className="btn-arrow" onClick={cmdUTM2Lat_click}><img src={arrowUp} /></button>
                         </div>
+
                         <div>
-                            <div>
-                                <div>X:</div>
-                                <div><input name="txtX" type="text" id="txtX3" /></div>
-                            </div>
-                            <div>
-                                <div>Y:</div>
-                                <div><input name="txtY" type="text" id="txtY3" /></div>
-                            </div>
-                            <div>
-                                <div>Zona:</div>
-                                <div><input name="txtZone" type="text" id="txtZone3" /></div>
-                            </div>
+                            <h2>UTM</h2>
                             <div>
                                 <div>
-                                    Hemisferio:
+                                    <div>X:</div>
+                                    <div><input name="txtX" type="text" id="txtX3" /></div>
                                 </div>
                                 <div>
-                                    <input onclick={0} type='radio' value='N' name='rbtnHemisphere' />
-                                    N
-                                    <input onclick={0} type='radio' value='S' name='rbtnHemisphere' />
-                                    S
+                                    <div>Y:</div>
+                                    <div><input name="txtY" type="text" id="txtY3" /></div>
+                                </div>
+                                <div>
+                                    <div>Zona:</div>
+                                    <div><input name="txtZone" type="text" id="txtZone3" /></div>
+                                </div>
+                                <div>
+                                    <div>
+                                        Hemisferio:
+                                    </div>
+                                    <div className="section-horizontal">
+                                        <input onclick={0} type='radio' value='N' name='rbtnHemisphere' />Norte
+                                        <input onclick={0} type='radio' value='S' name='rbtnHemisphere' />Sur
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -437,7 +427,8 @@ function CoordinateParser(props) {
                 <h3>Joaquin Alonso &#128526;</h3>
                 <button className="button">
                     <span className="button-text">
-                        <span>Comparte este recurso<img src={share} alt="" /></span>
+                        <span>Comparte este recurso</span>
+                        <img src={share} alt="" />
                     </span>
                     <span className="button-links">
                         <a href="https://twitter.com/intent/tweet?text=conversor%20de%20coordenadas&url=http://joalo95.github.io/convertidor&hashtags=webdesign">

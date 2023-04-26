@@ -16,41 +16,15 @@ body {
   position: relative;
 }
 
-@media only screen and (min-width: 370px) and (max-width: 769px) {
-
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  h2,
-  h3 {
-    font-size: 1rem;
-  }
-
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    width: 90vw;
-  }
-
-  .container .form {
-    flex: 0 1 6rem;
-  }
-}
-
 .App {
-  background: rgb(34, 193, 195);
-  background: linear-gradient(145deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+  background: rgb(3, 61, 62);
+  background: linear-gradient(65deg, rgb(29, 174, 176) 0%, rgba(253, 187, 45, 1) 100%);
   width: 100vw;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: #1a1a1a;
   text-align: center;
   position: relative;
   z-index: 2;
@@ -60,20 +34,51 @@ body {
   position: absolute;
   top: 0;
   width: 100vw;
+  height: 100vh;
   filter: opacity(50%);
   z-index: -1;
 }
 
-.form1,
-.form2,
+.container {
+  display: grid;
+  width: 90vw;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 10% 40% 40% 10%;
+  grid-template-areas: "header header"
+    "form1 form3"
+    "form2 form3"
+    "footer footer";
+  gap: 1rem;
+}
+
+.header {
+  grid-area: header;
+}
+
+.form1 {
+  grid-area: form1;
+}
+
+.form2 {
+  grid-area: form2;
+}
+
 .form3 {
+  grid-area: form3;
+}
+
+footer {
+  grid-area: footer;
+}
+
+.form {
   backdrop-filter: blur(16px) saturate(150%);
   -webkit-backdrop-filter: blur(16px) saturate(150%);
-  background-color: rgba(17, 25, 40, 0.25);
+  background-color: rgba(68, 69, 72, 0.25);
   border-radius: 12px;
   border: 1px solid rgba(255, 255, 255, 0.125);
 }
-
 
 h1 {
   font-size: 3rem;
@@ -101,8 +106,8 @@ div {
 input[type=radio] {
   appearance: none;
   border-radius: 50%;
-  width: 16px;
-  height: 16px;
+  width: 1.5rem;
+  height: 1.5rem;
   border: 2px solid var(--text-button-color);
   background-color: var(--bg-button-color);
   transition: 0.2s all linear;
@@ -117,17 +122,20 @@ input[type=radio]:checked {
 
 input[type=button],
 input[type=text],
-input[type=INT] {
+input[type=INT],
+.btn-arrow {
   border-radius: 12px;
   border: none;
+  outline: none;
   font-size: 0.75rem;
   height: 1.5rem;
-  padding: 0.25rem;
+  padding: 0 0.25rem;
   margin: 0.25rem;
   color: var(--text-button-color);
   background-color: var(--bg-button-color);
   font-family: Martel;
   text-align: center;
+  align-items: center;
 }
 
 .button {
@@ -161,10 +169,6 @@ input[type=INT] {
   justify-content: center;
   color: inherit;
   font-size: 0.75rem;
-}
-
-.button-text span img {
-  padding: 5px;
 }
 
 .button-links {
@@ -215,4 +219,53 @@ input[type=INT] {
 
 .button:hover .button-text {
   translate: 0 -100%;
+}
+
+@media only screen and (min-width: 370px) and (max-width: 769px) {
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2,
+  h3 {
+    font-size: 1rem;
+  }
+
+  .App {
+    background: rgb(34, 193, 195);
+    background: linear-gradient(145deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+    width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+  }
+
+  .App>img {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    filter: opacity(50%);
+    z-index: -1;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 90vw;
+  }
+
+  .container .form {
+    flex: 0 1 6rem;
+  }
 }
