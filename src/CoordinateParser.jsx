@@ -289,21 +289,21 @@ function CoordinateParser(props) {
 
                         <div>Insertar la latitud en grados, minutos y segundos:</div>
                         <div>
-                            <input name="dlat" type="INT" maxlength="5" id="DMSlat" onBlur={inputDlat} />
+                            <input name="dlat" type="INT" maxlength="6" id="DMSlat" onBlur={inputDlat} />
                             <label>°</label>
-                            <input name="mlat" type="INT" maxlength="4" id="DMSlat" onBlur={inputMlat} />
+                            <input name="mlat" type="INT" maxlength="6" id="DMSlat" onBlur={inputMlat} />
                             <label>'</label>
-                            <input name="slat" type="INT" maxlength="4" id="DMSlat" onBlur={inputSlat} />
+                            <input name="slat" type="INT" maxlength="6" id="DMSlat" onBlur={inputSlat} />
                             <label>"</label>
                         </div>
 
                         <div>Insertar la longitud en grados, minutos y segundos:</div>
                         <div>
-                            <input name="dlon" type="INT" maxlength="5" id="DMSlon" onBlur={inputDlon} />
+                            <input name="dlon" type="INT" maxlength="6" id="DMSlon" onBlur={inputDlon} />
                             <label>°</label>
-                            <input name="mlon" type="INT" maxlength="4" id="DMSlon" onBlur={inputMlon} />
+                            <input name="mlon" type="INT" maxlength="6" id="DMSlon" onBlur={inputMlon} />
                             <label>'</label>
-                            <input name="slon" type="INT" maxlength="4" id="DMSlon" onBlur={inputSlon} />
+                            <input name="slon" type="INT" maxlength="6" id="DMSlon" onBlur={inputSlon} />
                             <label>"</label>
                         </div>
 
@@ -357,10 +357,6 @@ function CoordinateParser(props) {
 
                     </form>
                 </div>
-                {/* ******** End Document Body******************************************* */}
-
-                {/* convertir a UTM */}
-
                 <form className="form form3" name="frmConverter">
 
                     <h3>Conversor de coordenadas decimales a UTM</h3>
@@ -388,8 +384,8 @@ function CoordinateParser(props) {
                         </div>
 
                         <div>
-                            <button className="btn-arrow" onClick={cmdLat2UTM_click}><img src={arrowDown} /></button>
-                            <button className="btn-arrow" onClick={cmdUTM2Lat_click}><img src={arrowUp} /></button>
+                            <button className="btn-arrow" onClick={cmdLat2UTM_click} ><img src={arrowDown} /></button>
+                            <button className="btn-arrow" onClick={cmdUTM2Lat_click} ><img src={arrowUp} /></button>
                         </div>
 
                         <div>
@@ -423,31 +419,33 @@ function CoordinateParser(props) {
             </div>
 
             <footer>
-                <h3>2023 &copy;</h3>
-                <h3>Joaquin Alonso &#128526;</h3>
-                <button className="button">
-                    <span className="button-text">
-                        <span>Comparte este recurso</span>
-                        <img src={share} alt="" />
-                    </span>
-                    <span className="button-links">
-                        <a href="https://twitter.com/intent/tweet?text=conversor%20de%20coordenadas&url=http://joalo95.github.io/convertidor&hashtags=webdesign">
-                            <img src={twitter} alt="" />
-                        </a>
-                        <a href="https://www.facebook.com/sharer/sharer.php?u=http://joalo95.github.io/convertidor">
-                            <img src={facebook} alt="" />
-                        </a>
-                        <a href="https://www.instagram.com/sharer/sharer.php?u=http://joalo95.github.io/convertidor">
-                            <img src={instagram} alt="" />
-                        </a>
-                        <a href="https://api.whatsapp.com/send?text=conversor%20de%20coordenadas&url=http://joalo95.github.io/convertidor">
-                            <img src={whatsapp} alt="" />
-                        </a>
-                        <a href="https://www.linkedin.com/sharing/share-offsite/?url=http://joalo95.github.io/convertidor">
-                            <img src={linkedin} alt="" />
-                        </a>
-                    </span>
-                </button>
+                <div><h3>2023 &copy;</h3></div>
+                <div><h3>Joaquin Alonso &#128526;</h3></div>
+                <div>
+                    <button className="button">
+                        <span className="button-text">
+                            <span>Comparte este recurso</span>
+                            <img src={share} alt="" />
+                        </span>
+                        <span className="button-links">
+                            <a href="https://twitter.com/intent/tweet?text=conversor%20de%20coordenadas&url=http://joalo95.github.io/ConvertidorCoordenadas&hashtags=webdesign">
+                                <img src={twitter} alt="" />
+                            </a>
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=http://joalo95.github.io/ConvertidorCoordenadas">
+                                <img src={facebook} alt="" />
+                            </a>
+                            <a href="https://www.instagram.com/sharer/sharer.php?u=http://joalo95.github.io/ConvertidorCoordenadas">
+                                <img src={instagram} alt="" />
+                            </a>
+                            <a href="https://api.whatsapp.com/send?text=conversor%20de%20coordenadas&url=http://joalo95.github.io/ConvertidorCoordenadas">
+                                <img src={whatsapp} alt="" />
+                            </a>
+                            <a href="https://www.linkedin.com/sharing/share-offsite/?url=http://joalo95.github.io/ConvertidorCoordenadas">
+                                <img src={linkedin} alt="" />
+                            </a>
+                        </span>
+                    </button>
+                </div>
             </footer>
         </div>
     )

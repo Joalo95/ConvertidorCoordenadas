@@ -20,7 +20,7 @@ body {
   background: rgb(3, 61, 62);
   background: linear-gradient(65deg, rgb(29, 174, 176) 0%, rgba(253, 187, 45, 1) 100%);
   width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,6 +32,7 @@ body {
 
 .App>img {
   position: absolute;
+  object-fit: cover;
   top: 0;
   width: 100vw;
   height: 100vh;
@@ -44,7 +45,7 @@ body {
   width: 90vw;
   height: 100vh;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 10% 40% 40% 10%;
+  grid-template-rows: 3rem 45% 45% 1fr;
   grid-template-areas: "header header"
     "form1 form3"
     "form2 form3"
@@ -66,10 +67,16 @@ body {
 
 .form3 {
   grid-area: form3;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 footer {
   grid-area: footer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
 
 .form {
@@ -81,7 +88,7 @@ footer {
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 800;
   font-family: Lobster;
   color: var(--title-color)
@@ -219,53 +226,4 @@ input[type=INT],
 
 .button:hover .button-text {
   translate: 0 -100%;
-}
-
-@media only screen and (min-width: 370px) and (max-width: 769px) {
-
-  h1 {
-    font-size: 1.5rem;
-  }
-
-  h2,
-  h3 {
-    font-size: 1rem;
-  }
-
-  .App {
-    background: rgb(34, 193, 195);
-    background: linear-gradient(145deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
-    width: 100vw;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    position: relative;
-    z-index: 2;
-  }
-
-  .App>img {
-    position: absolute;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    filter: opacity(50%);
-    z-index: -1;
-  }
-
-  .container {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1rem;
-    width: 90vw;
-  }
-
-  .container .form {
-    flex: 0 1 6rem;
-  }
 }
