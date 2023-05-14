@@ -428,19 +428,19 @@ function CoordinateParser(props) {
                             <img src={share} alt="" />
                         </span>
                         <span className="button-links">
-                            <a href="https://twitter.com/intent/tweet?text=conversor%20de%20coordenadas&url=http://joalo95.github.io/ConvertidorCoordenadas&hashtags=webdesign">
+                            <a href="https://twitter.com/intent/tweet?text=conversor%20de%20coordenadas&url=https://convertidor-coordenadas.vercel.app/&hashtags=webdesign">
                                 <img src={twitter} alt="" />
                             </a>
-                            <a href="https://www.facebook.com/sharer/sharer.php?u=http://joalo95.github.io/ConvertidorCoordenadas">
+                            <a href="https://www.facebook.com/sharer/sharer.php?u=https://convertidor-coordenadas.vercel.app/">
                                 <img src={facebook} alt="" />
                             </a>
-                            <a href="https://www.instagram.com/sharer/sharer.php?u=http://joalo95.github.io/ConvertidorCoordenadas">
+                            <a href="https://www.instagram.com/sharer/sharer.php?u=https://convertidor-coordenadas.vercel.app/">
                                 <img src={instagram} alt="" />
                             </a>
-                            <a href="https://api.whatsapp.com/send?text=conversor%20de%20coordenadas&url=http://joalo95.github.io/ConvertidorCoordenadas">
+                            <a href="https://api.whatsapp.com/send?text=conversor%20de%20coordenadas&url=https://convertidor-coordenadas.vercel.app/">
                                 <img src={whatsapp} alt="" />
                             </a>
-                            <a href="https://www.linkedin.com/sharing/share-offsite/?url=http://joalo95.github.io/ConvertidorCoordenadas">
+                            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://convertidor-coordenadas.vercel.app/">
                                 <img src={linkedin} alt="" />
                             </a>
                         </span>
