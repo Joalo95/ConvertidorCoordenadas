@@ -434,13 +434,13 @@ function CoordinateParser(props) {
                             <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fconvertidor-coordenadas.vercel.app">
                                 <img src={facebook} alt="" />
                             </a>
-                            <a href="https://www.instagram.com/sharer/sharer.php?u=https://convertidor-coordenadas.vercel.app/">
+                            <a href="https://www.instagram.com/sharer/sharer.php?u=https%3A%2F%2Fconvertidor-coordenadas.vercel.app">
                                 <img src={instagram} alt="" />
                             </a>
                             <a href="https://api.whatsapp.com/send?text=conversor%20de%20coordenadas%20https://convertidor-coordenadas.vercel.app/">
                                 <img src={whatsapp} alt="" />
                             </a>
-                            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://convertidor-coordenadas.vercel.app/">
+                            <a href="https://www.linkedin.com/shareArticle?url=https://convertidor-coordenadas.vercel.app/">
                                 <img src={linkedin} alt="" />
                             </a>
                         </span>
